@@ -1,0 +1,59 @@
+/**** ABOUT ****/
+.about{    
+    height: auto;  
+    background: var(--dark-200);
+}
+
+.about .container{    
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-content: center; 
+    gap: 16rem;
+
+}
+
+.about .foto img{
+    width: 100%;
+}
+
+.about .foto{
+    
+    clip-path: circle(39%);
+    
+}
+
+
+
+.about .content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 90%;
+    height: auto;   
+    flex-direction: column; 
+        
+}
+
+
+.about .text h3{
+    padding-top: 3.2rem;
+    padding-bottom: 2rem;   
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+.about .social{
+    display: flex;   
+    
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    gap: 3.2rem;
+    
+}
+.about .buttons{
+    display: flex;    
+    gap: 4rem;
+    
+    padding-top: 5rem;
+}

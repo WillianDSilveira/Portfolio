@@ -1,0 +1,235 @@
+
+
+
+.vortex linearGradient stop:nth-child(1){
+     animation: color 5s linear infinite;
+}
+
+@keyframes color {
+    0%{
+        stop-color: #FF1CF7;;
+    }
+    25%{
+        stop-color: #00F0FF;
+    }
+    50%{
+        stop-color: #00F0FF;
+    }
+    100%{
+        stop-color: #FF1CF7;
+    }
+}
+
+.vortex linearGradient stop:nth-child(2){
+    animation: twocolor 5s linear infinite;
+}
+
+@keyframes twocolor {
+    0%{
+        stop-color: #00F0FF;
+    }
+    25%{
+        stop-color: #FF1CF7;
+    }
+    50%{
+        stop-color: #FF1CF7;
+    }
+    100%{
+        stop-color: #00F0FF;
+    }    
+}
+
+
+.vortex path:nth-child(even){
+    animation: mover 6s infinite;  
+    animation-delay: 1s;
+}
+
+@keyframes mover{
+    0%{
+        transform: rotateZ(0deg);
+        transform: rotateX(0deg);           
+
+    }
+    50%{
+        transform: rotateZ(30deg);
+        transform: rotateX(40deg);
+        transform: rotateY(30deg);
+        transform: rotate(-1deg) scaleX(0.99) translateZ(-5px);     
+
+    }
+    100%{
+        transform: rotateZ(0deg);
+        transform: rotateX(0deg);        
+    }
+}
+
+
+.vortex path:nth-child(odd){
+    animation: oddmover 6s infinite;  
+    animation-delay: 1s;
+}
+
+  
+@keyframes oddmover{
+    0%{
+        transform: rotateZ(0deg);
+        transform: rotateX(0deg);           
+
+    }
+    50%{
+            
+        transform: rotate(1deg) scaleX(0.99) translateZ(5px);     
+
+    }
+    100%{
+        transform: rotateZ(0deg);
+        transform: rotateX(0deg);        
+    }
+}
+
+
+/* Media queries */
+
+
+
+@media (max-width: 1025px){    
+    .experience .container,
+    .about .container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 8rem;        
+    }
+    .experience .title{
+        flex-direction: column;
+    }
+
+    .contact .container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .contact .form,
+    .contact .group{        
+        width: 100%;
+    }
+
+    .contact .LogoTriade {        
+        padding-bottom: 10rem;
+        order: -1;
+    }
+
+}
+
+
+@media (max-width: 769px){
+    html{
+        font-size: 50%;
+    }
+    .projects .cards{
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+    
+    .contact input,
+    .contact textarea{
+        width: 100%;
+    }
+
+    .home .container{
+        justify-content: center;
+    }
+
+    
+    nav{
+        display: none;
+        
+    }
+
+    .one,
+    .two,
+    .three {
+        background-color: var(--white);
+        height: 5px;
+        width: 100%;
+        margin: 6px auto;
+
+        transition-duration: 0.3s;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+    }
+
+    .menu-section.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: 100vh;
+
+        background: var(--dark);
+
+        z-index: 10;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-section.on nav {
+        display: block;
+    }
+
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+
+    .menu-section.on .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .menu-section.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .menu-section.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(9px, -9px);
+
+    }
+
+    .menu-section.on nav ul {
+        text-align: center;
+        display: block;
+    }
+
+    .menu-section.on nav ul a {
+        transition-duration: 0.5s;
+        font-size: 3rem;
+        line-height: 3rem;
+        display: block;
+        padding: 2rem;
+    }
+
+    .home .buttons,
+    .about .buttons {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .btn{
+        width: 90vw;
+    }
+
+}
+
+
